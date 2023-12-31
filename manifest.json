@@ -1,0 +1,8 @@
+{
+  "name": "figma-plugin-vue-boilerplate",
+  "id": "",
+  "api": "1.0.0",
+  "editorType": ["figma", "figjam"],
+  "main": "dist/src/code/code.js",
+  "ui": "dist/src/ui/index.html"
+}
