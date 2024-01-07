@@ -1,6 +1,6 @@
 import { createApp } from 'vue';
 import App from './App.vue';
-// NOTE: 글로벌 SCSS 추가
-// import './ui.scss'
+import './assets/scss/_global.scss';
+import './assets/scss/_reset.scss';
 
 createApp(App).mount('#app');
