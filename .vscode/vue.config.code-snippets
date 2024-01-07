@@ -1,0 +1,20 @@
+{
+    "vue typescript": {
+        "prefix": "<vue3>",
+        "body": [
+            "<script setup lang=\"ts\">",
+            "// CONST, DOM\n\n",
+            "// props, emits, libs\n\n",
+            "// ref, reactive\n\n",
+            "// computed\n\n",
+            "// methods\n\n",
+            "// effect",
+            "</script>\n",
+            "<template>",
+            "</template>\n",
+            "<style lang=\"scss\" scoped>",
+            "</style>"
+        ],
+        "description": "vue typescript snippets"
+    }
+}
