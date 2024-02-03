@@ -1,6 +1,40 @@
-@font-face {
-  font-family: 'Pretendard-Regular';
-  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
-  font-weight: 400;
-  font-style: normal;
+/************************************
+* Font Faces
+* See: https://github.com/orioncactus/pretendard/tree/main?tab=readme-ov-file#가변-다이나믹-서브셋
+************************************/
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css');
+
+/************************************
+* Font Weights Variables
+************************************/
+$font_weight_regular: 400;
+$font_weight_medium: 500;
+$font_weight_semi_bold: 600;
+$font_weight_bold: 700;
+$font_weight_extra_bold: 800;
+
+/************************************
+* Mixins
+************************************/
+// font-size, font-weight를 정의하는 믹스인
+@mixin font-set($size, $weight) {
+  @if $size >= 9 and $size <= 32 {
+    font-size: #{$size}px;
+
+    @if $weight == 'regular' {
+      font-weight: $font_weight_regular;
+    } @else if $weight == 'medium' {
+      font-weight: $font_weight_medium;
+    } @else if $weight == 'semi-bold' {
+      font-weight: $font_weight_semi_bold;
+    } @else if $weight == 'bold' {
+      font-weight: $font_weight_bold;
+    } @else if $weight == 'extra-bold' {
+      font-weight: $font_weight_extra_bold;
+    } @else {
+      @warn "Invalid weight value: #{$weight}. Please use one of 'regular', 'medium', 'semi-bold', 'bold', 'extra-bold'.";
+    }
+  } @else {
+    @warn "Invalid size value: #{$size}. Please use a value between 9 and 32.";
+  }
 }
